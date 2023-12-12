@@ -1,8 +1,8 @@
 {
 	"index": "Introduction",
-	"getting_started": "Getting Started",
+	"getting-started": "Getting Started",
 	"authentication": "Authentication",
-	"api_section": "API 🤘",
+	"api-section": "API 🤘",
 	"home": {
 		"title": "Home Page",
 		"type": "page",
