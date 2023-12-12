@@ -2,7 +2,7 @@
 	"index": "Introduction",
 	"getting-started": "Getting Started",
 	"authentication": "Authentication",
-	"API": "API 🤘",
+	"api-section": "API 🤘",
 	"home": {
 		"title": "Home Page",
 		"type": "page",
