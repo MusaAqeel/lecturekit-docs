@@ -1,3 +1,65 @@
 # Get Course
 
-Get Course
+Retrieves details for a specific course based on the provided course ID.
+
+### Endpoint
+
+```plaintext
+GET https://www.lecturekit.io/api/v1/courses/:id
+```
+
+## Example Request
+
+### Node.js Example (with Axios)
+
+```js copy
+const axios = require('axios');
+
+async function getData() {
+	const response = await axios.get('https://www.lecturekit.io/api/v1/courses/123', {
+		headers: {
+			'x-api-key': 'YOUR_API_KEY',
+		},
+	});
+
+	return response.data;
+}
+
+getData();
+```
+
+### cURL Example
+
+```curl copy
+curl https://www.lecturekit.io/api/v1/courses/123 \
+  -H 'x-api-key: YOUR_API_KEY'
+```
+
+## Example Response
+
+```js
+{
+    "data": {
+        "_id": "123",
+        "projectId": "456",
+        "name": "Next.js - The Complete Guide",
+        "chapters": [
+            {
+                "id": "chapter-id",
+                "name": "First Chapter",
+                "lessons": [
+                    {
+                        "id": "lesson-id",
+                        "name": "First Lesson"
+                    }
+                ]
+            }
+        ],
+        "thumbnail": "",
+        "createdAt": "2023-11-04T20:48:40.183Z",
+        "updatedAt": "2023-11-28T17:02:54.705Z",
+    },
+    "success": true,
+    "message": ""
+}
+```

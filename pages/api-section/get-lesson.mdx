@@ -1,0 +1,56 @@
+# Get Lesson
+
+Retrieves details for a specific lesson based on the provided course ID and lesson ID.
+
+### Endpoint
+
+```plaintext
+GET https://www.lecturekit.io/api/v1/courses/:courseId/lessons/:lessonId
+```
+
+## Example Request
+
+### Node.js Example (with Axios)
+
+```js copy
+const axios = require('axios');
+
+async function getData() {
+	const response = await axios.get(
+		'https://www.lecturekit.io/api/v1/courses/123/lessons/456',
+		{
+			headers: {
+				'x-api-key': 'YOUR_API_KEY',
+			},
+		}
+	);
+
+	return response.data;
+}
+
+getData();
+```
+
+### cURL Example
+
+```curl copy
+curl https://www.lecturekit.io/api/v1/courses/123/lessons/456 \
+  -H 'x-api-key: YOUR_API_KEY'
+```
+
+## Example Response
+
+```js
+{
+    "data": {
+        "id": "456",
+        "name": "First Lesson",
+        "url": "video URL of the lesson",
+        "additionalText": "<div>HTML String</div>",
+        "createdAt": "2023-11-28T17:02:54.705Z",
+        "updatedAt": "2023-11-28T17:02:54.705Z",
+    },
+    "success": true,
+    "message": ""
+}
+```

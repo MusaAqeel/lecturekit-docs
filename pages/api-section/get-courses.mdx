@@ -1,1 +1,61 @@
-# courses ss 
+# Get Courses
+
+Retrieves a list of published courses. The courses are returned sorted by creation date, with the most recently created courses appearing first.
+
+### Endpoint
+
+```plaintext
+GET https://www.lecturekit.io/api/v1/courses
+```
+
+### Query parameters:
+    - `name` - allows you to filter courses based on their name.
+
+## Example Request
+
+### Node.js Example (with Axios)
+
+```js copy
+const axios = require('axios');
+
+async function getData() {
+	const response = await axios.get('https://www.lecturekit.io/api/v1/courses', {
+		headers: {
+			'x-api-key': 'YOUR_API_KEY',
+		},
+	});
+
+	return response.data;
+}
+
+getData();
+```
+
+### cURL Example
+
+```curl copy
+curl https://www.lecturekit.io/api/v1/courses \
+  -H 'x-api-key: YOUR_API_KEY'
+```
+
+## Example Response
+
+```js
+{
+    "data": {
+        "total": 1,
+        "results": [
+            {
+                "_id": "123",
+                "projectId": "456",
+                "name": "Next.js - The Complete Guide",
+                "thumbnail": "",
+                "createdAt": "2023-11-04T20:48:40.183Z",
+                "updatedAt": "2023-11-28T17:02:54.705Z",
+            }
+        ]
+    },
+    "success": true,
+    "message": ""
+}
+```

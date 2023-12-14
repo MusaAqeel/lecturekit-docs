@@ -1,1 +1,58 @@
-# lssons
+# Get Course Lessons
+
+Retrieves a list of lessons for a specific course based on the provided course ID.
+
+### Endpoint
+
+```plaintext
+GET https://www.lecturekit.io/api/v1/courses/:courseId/lessons
+```
+
+## Example Request
+
+### Node.js Example (with Axios)
+
+```js copy
+const axios = require('axios');
+
+async function getData() {
+	const response = await axios.get('https://www.lecturekit.io/api/v1/courses/123/lessons', {
+		headers: {
+			'x-api-key': 'YOUR_API_KEY',
+		},
+	});
+
+	return response.data;
+}
+
+getData();
+```
+
+### cURL Example
+
+```curl copy
+curl https://www.lecturekit.io/api/v1/courses/123/lessons \
+  -H 'x-api-key: YOUR_API_KEY'
+```
+
+## Example Response
+
+```js
+{
+    "data": {
+        "total": 1,
+        "results": [
+            {
+                "id": "lesson-id-1",
+                "name": "First Lesson"
+            },
+            {
+                "id": "lesson-id-2",
+                "name": "Second Lesson"
+            }
+        ]
+    },
+    "success": true,
+    "message": ""
+}
+```
