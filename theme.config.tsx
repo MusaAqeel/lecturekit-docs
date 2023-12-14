@@ -16,6 +16,7 @@ const config: DocsThemeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Documentation | LectureKit" />
       <meta property="og:description" content="Learn how to leverage all the powerful features of LectureKit." />
+      <meta property="og:image" content="https://lecturekit-assets.s3.amazonaws.com/og-ce7afca2-8b30-44c0-a04c-3bc9e3d0b0d2.png"></meta>
       <link rel="icon" type="image/png" href="/favicon.ico"></link>
     </>
   ),
