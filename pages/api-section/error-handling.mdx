@@ -1,0 +1,27 @@
+# Error Handling
+
+## Status Codes
+
+### 401 Unauthorized
+- **Meaning**: The request lacks valid authentication credentials.
+- **Example Response**:
+```json
+{
+  "status": "error",
+  "code": 401,
+  "message": "Unauthorized",
+  "data": null
+}
+```
+
+### 429 Too Many Requests
+- **Meaning**: The user has sent too many requests in a given amount of time. This can indicate rate limiting or reaching the maximum API calls allowed for the plan.
+- **Example Response**:
+```json
+{
+  "status": "error",
+  "code": 429,
+  "message": "Too Many Requests",
+  "data": null
+}
+```
