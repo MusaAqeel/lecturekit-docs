@@ -1,8 +1,7 @@
 {
 	"index": "Introduction",
-	"getting-started": "Getting Started",
-	"authentication": "Authentication",
-	"api-section": "API 🤘",
+	"embed": "Embed & Share",
+	"developers": "Developers",
 	"home": {
 		"title": "Home Page",
 		"type": "page",
